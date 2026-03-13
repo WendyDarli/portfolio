@@ -34,12 +34,13 @@ body{
 }
 
 .section-container{
-    padding: 50px;
+
     height: 100vh;
     width: 100vw;
 }
 
 .shadow-text{
+    padding: 2% 10%;
     color: var(--lilac-text);
     font-size: 100px;
     font-weight: bold;
