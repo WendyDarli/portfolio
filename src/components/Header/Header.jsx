@@ -4,14 +4,14 @@ function Header(){
     return(
         <div className='header-container'>
             <div className='header-sub-container'>
-                <a>about</a>
-                <a>projects</a>
-                <a>skills</a>                
+                <a href="#about">about</a>
+                <a href="#projects">projects</a>
+                <a href="#skills">skills</a>                
             </div>
 
             <div className='header-sub-container'>
-                <a>contact</a>
-                <a>resume</a>
+                <a href="#contact">contact</a>
+                <a href="#resume">resume</a>
                 <a 
                     href='https://github.com/WendyDarli' 
                     target="_blank" 
