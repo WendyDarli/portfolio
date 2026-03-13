@@ -1,0 +1,86 @@
+.side-header-container{
+    display: flex;
+    gap: 50px;
+    position: fixed;
+    top: 40%;
+    left: -8%;
+    transform: rotate(-90deg);
+    padding: 30px;
+
+    
+  -webkit-mask-image: linear-gradient(to right, 
+    transparent 0%, 
+    black 40%, 
+    black 60%, 
+    transparent 100%
+  );
+  mask-image: linear-gradient(to right, 
+    transparent 0%, 
+    black 40%, 
+    black 60%, 
+    transparent 100%
+  );
+
+  -webkit-mask-size: 300% 100%;
+    mask-size: 300% 100%;
+  
+  -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    animation: reveal-from-end 1.5s ease-out forwards;
+
+    -webkit-mask-position: -50% 0;
+    mask-position: -50% 0;
+
+}
+
+.side-header-container a{
+    font-size: 20px;
+    color: var(--white-60-opacity);
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.side-header-container a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--white);
+    transition: width 0.3s ease-in-out;
+}
+
+.side-header-container a:hover::after{
+    width: 100%;
+}
+
+.side-header-container a:hover{
+    color: var(--white);
+}
+
+.side-header-container a.active{
+    color: var(--white);
+}
+
+.side-header-container a.active{
+    color: var(--white);
+}
+
+.side-header-container a.active::after{
+    width: 100%;
+}
+
+
+/* fade in animation */
+@keyframes reveal-from-end {
+  0% {
+    -webkit-mask-position: -50% 0;
+    mask-position: -50% 0;
+  }
+  100% {
+    -webkit-mask-position: 50% 0;
+    mask-position: 50% 0;
+  }
+}

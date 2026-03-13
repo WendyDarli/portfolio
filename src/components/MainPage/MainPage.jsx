@@ -29,7 +29,7 @@ function MainPage(){
 
 
     return(
-      <div className='pages-container main-page-background'>
+      <div id='start' className='pages-container main-page-background'>
         <img className='elipse' src='src/assets/images/ellipse.svg' alt="background ellipse" />
 
         <StarIcon id={'star-1'} />
