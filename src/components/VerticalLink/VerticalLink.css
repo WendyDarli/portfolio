@@ -1,0 +1,47 @@
+.vertical-github-container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  transform: rotate(90deg);
+
+  -webkit-mask-image: linear-gradient(to right, 
+    transparent 0%, 
+    black 40%, 
+    black 60%, 
+    transparent 100%
+  );
+  mask-image: linear-gradient(to right, 
+    transparent 0%, 
+    black 40%, 
+    black 60%, 
+    transparent 100%
+  );
+
+  -webkit-mask-size: 300% 100%;
+  mask-size: 300% 100%;
+  
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  animation: reveal-loop 3s linear infinite;
+}
+
+.github-link-text{
+    font-family: "Kosugi Maru", sans-serif;
+    text-decoration: none;
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+/* fading animation for vertical link */
+@keyframes reveal-loop{
+  0% {
+    -webkit-mask-position: 150% 0;
+    mask-position: 150% 0;
+  }
+  100% {
+    -webkit-mask-position: -50% 0;
+    mask-position: -50% 0;
+  }
+}

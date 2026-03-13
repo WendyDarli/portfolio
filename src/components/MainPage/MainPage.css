@@ -1,0 +1,111 @@
+/* fustat */
+@import url('https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap');
+
+
+.main-page-background{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.elipse{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.portfolio-text-container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    width: 100%;
+    overflow: hidden;
+    transform: translatey(30%); 
+    z-index: -1;
+
+}
+.portfolio-text{
+    color: var( --fadding-white-text);
+    font-size: 17vw;
+    font-weight: bold;
+    z-index: -1;
+}
+
+.development-text-container{
+    position: absolute;
+    top: 75%;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.development-text{
+    color: var(--dust-blue);
+    font-size: 4.8vw;
+    font-weight: bold;
+    margin: -25px 60px;
+    white-space: pre;
+}
+#dev-text{
+    margin-right: 170px;
+}
+
+.star{
+    position: absolute;
+    height: 50px;
+    color: var(--white);
+}
+
+#star-1 { top: 14%; left: 17.5%; transform: rotate(80deg);}
+#star-2 { top: 68%; left: 82.2%; transform: rotate(40deg);}
+#star-3 { top: 80%; left: 17.5%; transform: rotate(80deg);}
+#star-4 { top: 27%; left: 82.3%; }
+
+
+.unicorn-girl {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  animation: unicorn-cycle 8s infinite;
+}
+
+.unicorn-girl-glitch-1 { animation: glitch1 8s infinite; }
+.unicorn-girl-glitch-2 { animation: glitch2 8s infinite; }
+.unicorn-girl-glitch-3 { animation: glitch3 8s infinite; }
+
+@keyframes unicorn-cycle {
+  0%, 3.75% { opacity: 1; }       
+  3.76%, 6.25% { opacity: 1; }    
+  6.26%, 100% { opacity: 1; }     
+}
+
+@keyframes glitch1 {
+    0%, 3.7%, 100% { opacity: 0; }
+    0.1%, 2% { opacity: 1; }
+}
+
+@keyframes glitch2 {
+    0%, 3.7%, 100% { opacity: 0; }
+    2%, 3% { opacity: 1; }
+
+}
+
+@keyframes glitch3 {
+  0%, 3.7%, 100% { opacity: 0; }
+  20%, 21% { opacity: 1; }
+  20%, 21.01% { opacity: 0; } /* Back to invisible for the rest of the 8s */
+}
+

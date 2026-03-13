@@ -1,0 +1,61 @@
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 30px 30px;
+    font-size: 20px;
+    color: var(--white);
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 10;
+    
+}
+
+.header-sub-container{
+    padding-left: 40px;
+}
+
+.header-sub-container a{
+    display: inline-flex;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.header-sub-container a {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* underline on hover for header links */
+.header-sub-container a:not(.github-link)::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--white);
+    transition: width 0.3s ease-in-out;
+}
+
+.header-sub-container a:not(:has(.github-icon)):hover::after {
+    width: 100%;
+}
+
+.github-icon{
+    height: 3.5rem;
+    width: auto;
+    vertical-align: middle;
+    color: var(--white-60-opacity);
+
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.github-icon:hover{
+    color: var(--white);
+}

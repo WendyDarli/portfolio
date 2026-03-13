@@ -1,0 +1,29 @@
+.language-container{
+    font-family: "IBM Plex Mono", monospace;
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    z-index: 11;
+}
+
+.border-bottom-text{
+    text-align: end;
+    width: 20rem;
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+}
+
+.white-bg-text{
+    background-color: var(--white);
+    color: var(--black);
+    width: fit-content;
+    padding: 0px 10px;
+    margin-bottom: 5px;
+}
+
+.language-options-container{
+    display: flex;
+    color: var(--black);
+    gap: 19px;
+    cursor: pointer;
+}
