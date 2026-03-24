@@ -29,7 +29,7 @@ function MainPage(){
 
 
     return(
-      <div id='start' className='pages-container main-page-background'>
+      <section id='start' className='section-container main-page-background'>
         <img className='elipse' src='src/assets/images/ellipse.svg' alt="background ellipse" />
 
         <StarIcon id={'star-1'} />
@@ -55,7 +55,7 @@ function MainPage(){
         <VerticalLink />
         <Language />
         
-      </div>
+      </section>
     );
 };
 

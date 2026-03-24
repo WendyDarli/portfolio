@@ -1,0 +1,54 @@
+#skills{
+    padding: 5% 10%;
+    color: var(--white);
+}
+
+.skills-container{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.skill{
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    animation: popUp 1.5s forwards;
+}
+
+.skill-icon{
+    width: 50px;
+    height: 50px;
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  80% {
+    opacity: 0.5;
+    transform: translateY(-4px) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.skill:nth-child(1) { animation-delay: 0.2s; }
+.skill:nth-child(2) { animation-delay: 0.4s; }
+.skill:nth-child(3) { animation-delay: 0.8s; }
+.skill:nth-child(4) { animation-delay: 1s; }
+.skill:nth-child(5) { animation-delay: 1.2s; }
+.skill:nth-child(6) { animation-delay: 1.4s; }
+.skill:nth-child(7) { animation-delay: 1.8s; }
+.skill:nth-child(8) { animation-delay: 1.9s; }
+.skill:nth-child(9) { animation-delay: 2s; }
+.skill:nth-child(10) { animation-delay: 2.2s; }
+.skill:nth-child(11) { animation-delay: 2.4s; }
+.skill:nth-child(12) { animation-delay: 2.6s; }
+.skill:nth-child(13) { animation-delay: 2.8s; }
+.skill:nth-child(14) { animation-delay: 3s; }

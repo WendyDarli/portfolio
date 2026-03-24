@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 // Components
 import Header from './Header/Header';
@@ -11,11 +11,11 @@ import ContactSection from './ContactSection/ContactSection';
 import SideBar from './SideBar/SideBar';
 
 function App() {
-
+  const containerRef = useRef(null);
   const [activeSection, setActiveSection] = useState(null);
 
+  //effect to hightlight active section in sidebar
   useEffect(() => {
-
     const sections = document.querySelectorAll("section");
 
     const observer = new IntersectionObserver(
@@ -40,25 +40,35 @@ function App() {
 
   const [showHeader, setShowHeader] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowHeader(window.scrollY > window.innerHeight * 0.95);
-    };
+  //effect to scroll
+useEffect(() => {
+  const container = containerRef.current;
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const handleScroll = () => {
+    setShowHeader(
+      container.scrollTop > container.clientHeight * 0.95
+    );
+  };
+
+  container.addEventListener("scroll", handleScroll);
+
+  return () => container.removeEventListener("scroll", handleScroll);
+}, []);
 
   return (
     <>
+
+    <div className="main-container" ref={containerRef}>
       <Header />
       <MainPage />
       
       {showHeader && <SideBar activeSection={activeSection}/>}
-      <AboutSection />
-      <ProjectsSection />
+      <AboutSection isActive={activeSection === 'about'}/>
       <SkillsSection />
+      <ProjectsSection />
+
       <ContactSection />
+    </div>
 
     </>
   );

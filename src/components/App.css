@@ -7,6 +7,9 @@
 /* kosugi maru */
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 
+/* Homenage */
+@import url('https://fonts.googleapis.com/css2?family=Homenaje&display=swap');
+
 :root{
     --fadding-white-text: #ffffff4d;
     --dust-blue: #6A6F7E;
@@ -16,7 +19,7 @@
     --black: #3A3A3A;
     --white-17-opacity: #ffffff2b;
     --global-padding: 5%;
-    --dark-gray: #636363;
+    --dark-gray: #3A3A3A;
 }
 
 html{
@@ -26,7 +29,7 @@ html{
 body{
     background-image: url('../assets/images/bgy.png');
     font-family: "Fustat", sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 *{
@@ -35,10 +38,25 @@ body{
     box-sizing: border-box;
 }
 
-.section-container{
+.title{
+    color: var(--white);
+    font-family: "Homenaje", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    margin-bottom: 50px;
+}
 
-    height: 100vh;
-    width: 100vw;
+.main-container {
+    position: relative;
+    height: 100vh; 
+    overflow-y: scroll;
+  
+}
+.section-container{
+    scroll-snap-align: start;
+    
+    width: 100%;
 }
 
 .shadow-text{
