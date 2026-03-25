@@ -1,4 +1,5 @@
 import './ProjectsSection.css';
+import {projectsCardInfo as cardInfo} from '.././../database/projectsCardInfo';
 
 function ProjectsSection(){
 
@@ -21,16 +22,32 @@ function ProjectsSection(){
                     ))}
                 </div>
             </div>
-            <h1 className='title'>Projects</h1>
-            <div className='project-container'>
 
 
-                <div className='project'>
-                    <h2 className='project-title'>Project 1</h2>
-                    <p className='project-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur varius. 
-                        Sed at ligula a enim efficitur commodo. Curabitur ac odio id nisl convallis tincidunt. 
-                        Maecenas in felis sed enim efficitur fermentum.</p>
-                </div>
+            <div className='projects-container'>
+                <h1 className='title'>Projects</h1>
+                {cardInfo.map((project) =>(
+                    <div key={project.title} className='project'>
+                        <img className='project-deco-card' src='src/assets/images/project-deco-card.png'/>
+                        <div>
+                            <img className='project-icon' src={project.icon} alt='project-icon'/>
+                            <p className='project-title'>{project.title}</p>
+                            <hr className='fade-line'/>
+                        </div>
+
+                        <p className='project-description'>{project.description}</p>
+                        <div className='project-tags-container'>
+                            {project.tags.map((tag, index) => (
+                                <p key={index} className='project-tag'>{tag}</p>
+                            ))}
+                        </div>
+
+                        <button className='open-project-button'>see more</button>
+                    </div>
+                ))}
+
+
+
             </div>
 
         </section>
