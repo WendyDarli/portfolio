@@ -2,10 +2,39 @@ import './ContactSection.css';
 
 function ContactSection(){
 
+    const subject = encodeURIComponent("Opportunity");
+    const body = encodeURIComponent(
+        "Hi, I came across your portfolio and wanted to reach out. I'd love to connect!"
+    );
+    
+    const link = `https://mail.google.com/mail/?view=cm&fs=1&to=w.end.darli@gmail.com&su=${subject}&body=${body}`;
+
     return(
         <section id='contact' className='section-container'>
             <div>
-                <p className='shadow-text'>Contact &lt;3</p>
+                <p className='title'>Contact</p>
+                <p id='end-text'>A-01</p>
+                <div className='contact-info-contianer'>
+                    <div className='contact-text'>
+                        <p>“I’m currently available for hiring, internships, and freelance work. If you have a project, 
+                            opportunity, or just a question, feel free to reach out.
+                        </p>                 
+                    </div>
+                    <div>
+                        <a
+                        href={link}
+                        target="_blank">
+                            <img className="contact-icon" src="/src/assets/icons/email.svg" alt="email" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/wendy-v-a558a32b1/" target="_blank" rel="noopener noreferrer">
+                            <img className='contact-icon' src='/src/assets/icons/linkedin.svg' alt='linkedin'/>
+                        </a>
+                        <a href="https://wa.me/your-phonenumber" target="_blank" rel="noopener noreferrer">
+                            <img className='contact-icon' src='/src/assets/icons/whatsapp.svg' alt='whatsapp'/>
+                        </a>
+                    </div>                    
+                </div>               
+
             </div>
         </section>
 
