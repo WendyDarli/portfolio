@@ -68,6 +68,7 @@ useEffect(() => {
       <ProjectsSection />
 
       <ContactSection />
+      <footer>© 2026  Made with ♡ by Wendy Darli.</footer>
     </div>
 
     </>

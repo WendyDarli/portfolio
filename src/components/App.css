@@ -75,3 +75,8 @@ a.visited{
     color: var(--white);
 }
 
+footer {
+  text-align: center;
+  padding: 40px;
+  color:var(--white)
+}
