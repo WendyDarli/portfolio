@@ -1,6 +1,44 @@
 import './SkillsSection.css';
+import { useEffect, useRef } from 'react';
+
 
 function SkillsSection(){
+
+    const skills = [
+        { name: 'JavaScript', icon: '/src/assets/icons/javaScript.svg' },
+        { name: 'HTML', icon: '/src/assets/icons/html.svg' },
+        { name: 'CSS', icon: '/src/assets/icons/css.svg' },
+        { name: 'Git', icon: '/src/assets/icons/git.svg' },
+        { name: 'GitHub', icon: '/src/assets/icons/github.svg' },
+        { name: 'MySQL', icon: '/src/assets/icons/mySql.svg' },
+        { name: 'MongoDB', icon: '/src/assets/icons/mongoDb.svg' },
+        { name: 'PostgreSQL', icon: '/src/assets/icons/postgreSql.svg' },
+        { name: 'Node.js', icon: '/src/assets/icons/nodeJs.svg' },
+        { name: 'Express', icon: '/src/assets/icons/express.svg' },
+        { name: 'React', icon: '/src/assets/icons/react.svg' },
+    ];
+
+    const elementsRef = useRef([]);
+
+    // Observer to trigger animation when skill icons come into view
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+          
+            }
+        });
+        });
+
+        elementsRef.current.forEach((el) => {
+            if (el) observer.observe(el);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
 
     return(
         <section id='skills' className='section-container'>      
@@ -8,51 +46,15 @@ function SkillsSection(){
                 <p className='title'>Skills</p>
                 <div className='skills-container'>
                     
-                        <div className='skill'>
-                            <img className='skill-icon' src='src\assets\icons\javaScript.svg' alt='javascript'/>
-                            <p>JavaScript</p>
+                    {skills.map((skill, i) => (
+                        <div key={i}
+                            className='skill-hidden'
+                            ref={(el) => (elementsRef.current[i] = el)}
+                        >
+                            <img className='skill-icon' src={skill.icon} alt={skill.name}/>
+                            <p>{skill.name}</p>
                         </div>
-                        <div className='skill'>
-                            <img className='skill-icon' src='src\assets\icons\html.svg' alt='html'/>
-                            <p>HTML</p>
-                        </div>
-                        <div className='skill'>
-                            <img className='skill-icon' src='src\assets\icons\css.svg' alt='css'/>
-                            <p>CSS</p>
-                        </div>
-                        <div className='skill'>
-                            <img className='skill-icon' src='src\assets\icons\git.svg' alt='git'/>
-                            <p>Git</p>
-                        </div>                        
-                        <div className='skill'>
-                            <img className='skill-icon' src='src\assets\icons\github.svg' alt='github'/>
-                            <p>GitHub</p>
-                        </div>                  
-                        <div className='skill'>
-                            <img className='skill-icon' src='src\assets\icons\mySql.svg' alt='mysql'/>
-                            <p>MySQL</p>
-                        </div>
-                        <div className='skill'>
-                            <img className='skill-icon' src='src\assets\icons\mongoDb.svg' alt='mongodb'/>
-                            <p>MongoDB</p>
-                        </div>
-                        <div className='skill'>
-                            <img className='skill-icon' src='src\assets\icons\postgreSql.svg' alt='postgresql'/>
-                            <p>PostgreSQL</p>
-                        </div>   
-                        <div className='skill'>
-                            <img className='skill-icon' src='src\assets\icons\nodeJs.svg' alt='nodejs'/>
-                            <p>Node.js</p>
-                        </div>                        
-                        <div className='skill'>
-                            <img className='skill-icon' src='src\assets\icons\express.svg' alt='express'/>
-                            <p>Express</p>
-                        </div>
-                        <div className='skill'>
-                            <img className='skill-icon' src='src\assets\icons\react.svg' alt='react'/>
-                            <p>React</p>
-                        </div>
-                                           
+                    ))}                                          
                 </div>
         </section>
 
