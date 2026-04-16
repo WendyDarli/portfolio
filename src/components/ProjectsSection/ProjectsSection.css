@@ -1,40 +1,3 @@
-.tech-carousel {
-    margin-bottom: 40px;
-    border-top: 2px solid var(--white);
-    border-bottom: 2px solid var(--white);
-    color: var(--white);
-
-
-    padding: 20px 0px;
-    width: 100%;
-
-    overflow-x: auto;
-    display: flex;
-}
-
-.tech-carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.track {
-    display: flex;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    width: max-content;
-     
-    animation: spin 50s linear infinite;
-}
-
-.track p {
-    flex: 0 0 10rem;
-}
-
-@keyframes spin {
-  from { transform: translateX(0); }
-  to { transform: translateX( -100%); }
-}
-
-
 .projects-container{
     display: flex;
 
@@ -120,7 +83,6 @@
 
     top: -3%;
     left: 4.3%;
-
 
     pointer-events: none;
 }

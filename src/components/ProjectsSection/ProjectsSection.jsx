@@ -1,32 +1,28 @@
 import './ProjectsSection.css';
-import {projectsCardInfo as cardInfo} from '.././../database/projectsCardInfo';
+
+// Database
+import { projectsCardInfo as cardInfo } from '.././../database/projectsCardInfo';
+import { projectsModalContent as projects } from '../../database/projectsModalContent';
+
+// Hooks
+import useModal from '../../hooks/useModal';
+
+// Components
+import TechCarousel from '../TechCarousel/TechCarousel';
+import ProjectsModal from '../ProjectsModal/ProjectsModal';
+
 
 function ProjectsSection(){
-
-    const items = [
-        'React',' ','JavaScript',' ','JWT',' ','Node.js',' ',
-        'Express',' ','Restful APIs', ' ' ,'ORMs',' ','Docker',' ','Caching',' '
-    ];
+    const { isOpen, openModal, closeModal, activeId } = useModal();
 
     return(
         <section id='projects' className='section-container'>      
-            <div className='tech-carousel'>
-                <div className='track'>              
-                    {[...items].map((text, index) => (
-                        <p key={index}>{text}</p>
-                    ))}
-                </div>
-                <div className='track'>              
-                    {[...items].map((text, index) => (
-                        <p key={index + '#'}>{text}</p>
-                    ))}
-                </div>
-            </div>
 
+            <TechCarousel />
 
             <div className='projects-container'>
                 <h1 className='title'>Projects</h1>
-                {cardInfo.map((project) =>(
+                {cardInfo.map((project) => (
                     <div key={project.title} className='project'>
                         <img className='project-deco-card' src='src/assets/images/project-deco-card.png'/>
                         <div>
@@ -42,13 +38,16 @@ function ProjectsSection(){
                             ))}
                         </div>
 
-                        <button className='open-project-button'>see more</button>
+                        <button className='open-project-button' 
+                            onClick={() => openModal(project.id)}
+                        >see more</button>
                     </div>
                 ))}
 
 
-
             </div>
+
+            <ProjectsModal isOpen={isOpen} closeModal={closeModal} activeId={activeId} />
 
         </section>
 

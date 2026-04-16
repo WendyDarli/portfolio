@@ -40,7 +40,8 @@ function App() {
 
   const [showHeader, setShowHeader] = useState(false);
 
-  //effect to scroll
+  //effect to scroll 
+  // Important otherwise sidebar wont show up
 useEffect(() => {
   const container = containerRef.current;
 
@@ -55,21 +56,21 @@ useEffect(() => {
   return () => container.removeEventListener("scroll", handleScroll);
 }, []);
 
+
   return (
     <>
+      <div id='app' className='main-container app hidden' ref={containerRef}>
+        <Header />
+        <MainPage />
+        
+        {showHeader && <SideBar activeSection={activeSection}/>}
+        <AboutSection isActive={activeSection === 'about'}/>
+        <SkillsSection />
+        <ProjectsSection />
 
-    <div className="main-container" ref={containerRef}>
-      <Header />
-      <MainPage />
-      
-      {showHeader && <SideBar activeSection={activeSection}/>}
-      <AboutSection isActive={activeSection === 'about'}/>
-      <SkillsSection />
-      <ProjectsSection />
-
-      <ContactSection />
-      <footer>© 2026  Made with ♡ by Wendy Darli.</footer>
-    </div>
+        <ContactSection />
+        <footer>© 2026  Made with ♡ by Wendy Darli.</footer>
+      </div>
 
     </>
   );
