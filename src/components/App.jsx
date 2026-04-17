@@ -10,6 +10,7 @@ import SkillsSection from './SkillsSection/SkillsSection';
 import ContactSection from './ContactSection/ContactSection';
 import SideBar from './SideBar/SideBar';
 
+
 function App() {
   const containerRef = useRef(null);
   const [activeSection, setActiveSection] = useState(null);

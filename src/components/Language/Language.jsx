@@ -1,18 +1,29 @@
 import './Language.css';
-
+import { useLanguage } from './languageContext';
 function Language(){
+    const { language, setLanguage, t } = useLanguage();
 
     return(
         <div className='language-container'>
             <p className='border-bottom-text'>A-01</p>
-            <p className='white-bg-text'>LANGUAGE</p>
+            <p className='white-bg-text'>{t('language.language')}</p>
             <div className='language-options-container'>
-                <p>ENGLISH</p>
+                <button 
+                className={`language-bttn ${language === 'en' ? 'activeLanguage' : ''}`}
+                onClick={() => {setLanguage('en')}}> 
+                    ENGLISH 
+                </button>
+                
                 <p> - </p>
-                <p>PORTUGUESE</p>
+
+                <button 
+                className={`language-bttn ${language === 'pt' ? 'activeLanguage' : ''}`} 
+                onClick={() => {setLanguage('pt')}}> 
+                    PORTUGUESE 
+                </button>
             </div>
         </div>
     )
 }
 
-export default Language
+export default Language;

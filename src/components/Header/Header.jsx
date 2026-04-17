@@ -1,6 +1,9 @@
 import './Header.css';
 import GithubIcon from '../GithubIcon';
+import { useLanguage } from '../Language/languageContext';
+
 function Header(){
+    const { t } = useLanguage();
     return(
 
         <>
@@ -17,14 +20,14 @@ function Header(){
 
             <div className='header-container desktop-only'>
                 <div className='header-sub-container'>
-                    <a href="#about">about</a>
-                    <a href="#projects">projects</a>
+                    <a href="#about"> {t('header.about')} </a>
+                    <a href="#projects"> {t('header.projects')} </a>
                     <a href="#skills">skills</a>                
                 </div>
 
                 <div className='header-sub-container'>
-                    <a href="#contact">contact</a>
-                    <a href="#resume">resume</a>
+                    <a href="#contact"> {t('header.contact')} </a>
+                    <a href="#resume"> {t('header.resume')} </a>
                     <a 
                         href='https://github.com/WendyDarli' 
                         target="_blank" 

@@ -6,8 +6,11 @@ import Language from '../Language/Language';
 import StarIcon from "../StarIcon";
 import VerticalLink from '../VerticalLink/VerticalLink';
 import runScramble from '../../utils/scrambleText';
+import { useLanguage } from '../Language/languageContext';
 
 function MainPage(){
+
+  const { t } = useLanguage();
 
   const textRef1 = useRef(null);
   const textRef2 = useRef(null);
@@ -33,9 +36,9 @@ function MainPage(){
         {/* mobile elements */}
         <div className='mobile-elements-container mobile-only'>
           <p className='code-text' > &lt;title&gt; </p>
-          <h1 className='big-title'> Hello,</h1>
-          <h1 className='big-title'> I'm Wendy</h1>
-          <h3 className='small-title'> Backend Developer </h3>
+          <h1 className='big-title'> {t('main-page.hello')},</h1>
+          <h1 className='big-title'> {t('main-page.intro-name')} </h1>
+          <h3 className='small-title'> {t('main-page.role')} </h3>
         </div>
 
 

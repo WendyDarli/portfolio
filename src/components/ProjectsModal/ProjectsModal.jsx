@@ -3,8 +3,10 @@ import { useState, useEffect } from 'react';
 
 // Database
 import { projectsModalContent as projects } from '../../database/projectsModalContent';
+import { useLanguage } from '../Language/languageContext';
 
 function ProjectsModal({ activeId, isOpen, closeModal }) {
+    const { t } = useLanguage();
     const projectModal = projects.find(obj => obj.id === activeId) || null;
     
 
@@ -26,6 +28,8 @@ function ProjectsModal({ activeId, isOpen, closeModal }) {
 
     const toggleOpen = () => setOpen((o) => !o);
 
+    if (!isOpen || !projectModal) return null;
+    const desc = t(projectModal.description);
 
     return (
         isOpen && projectModal && (
@@ -78,7 +82,7 @@ function ProjectsModal({ activeId, isOpen, closeModal }) {
                     </div>
 
                     <div className='modal-info-container'>
-                        {projectModal.description.map((line, index) => (
+                        {desc.map((line, index) => (
                             <p key={index}>{line}</p>
                         ))}
                         <div className='modal-tags-contianer'>
@@ -92,7 +96,7 @@ function ProjectsModal({ activeId, isOpen, closeModal }) {
                                 disabled={!projectModal.isOngithub}>
 
                                 <span className="modal-bttn-content">
-                                    View code on GitHub
+                                    {t('projects-modal.buttons.github')}
                                     <img src="/src/assets/icons/right-arrow.svg" className="modal-bttn-arrow" alt="" />
                                 </span>
                             </button>
@@ -102,7 +106,7 @@ function ProjectsModal({ activeId, isOpen, closeModal }) {
                                 disabled={!projectModal.isDeployed}>
 
                                 <span className="modal-bttn-content">
-                                    View Project
+                                    {t('projects-modal.buttons.deploy')}
                                     <img src="/src/assets/icons/right-arrow.svg" className="modal-bttn-arrow" alt="" />
                                 </span>
                             </button>

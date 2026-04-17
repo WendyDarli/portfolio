@@ -1,6 +1,8 @@
+import { useLanguage } from '../Language/languageContext';
 import './ContactSection.css';
 
 function ContactSection(){
+    const { t } = useLanguage();
 
     const subject = encodeURIComponent("Opportunity");
     const body = encodeURIComponent(
@@ -12,12 +14,11 @@ function ContactSection(){
     return(
         <section id='contact' className='section-container'>
             <div>
-                <p className='title'>Contact</p>
+                <p className='title'>{t('contact.contact')}</p>
                 <p id='end-text'>A-01</p>
                 <div className='contact-info-contianer'>
                     <div className='contact-text'>
-                        <p>“I’m currently available for hiring, internships, and freelance work. If you have a project, 
-                            opportunity, or just a question, feel free to reach out.
+                        <p>{t('contact.desc')}
                         </p>                 
                     </div>
                     <div>
