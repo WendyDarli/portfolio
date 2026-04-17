@@ -32,3 +32,14 @@
   transform: translateY(-10px);
   cursor: pointer;
 }
+
+@media (max-width: 900px) {
+    .contact-info-contianer{
+        flex-direction: column;
+        gap: 20px;
+      
+    }
+    .contact-text{
+        max-width: 100%;
+    }
+}

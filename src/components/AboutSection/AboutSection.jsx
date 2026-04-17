@@ -19,8 +19,8 @@ function AboutSection() {
                         I enjoy the process of turning ideas into working interfaces and improving my code as I learn better patterns and tools.
                         Right now I’m focused on strengthening my practical development skills and gaining real-world experience by working with 
                         a team, contributing to projects, and continuing to grow as a developer.</p>
-                </div> 
-                <p>something</p>             
+                </div>
+                
             </div>
             
 

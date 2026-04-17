@@ -56,3 +56,9 @@
 .show:nth-child(12) { animation-delay: 2.6s; }
 .show:nth-child(13) { animation-delay: 2.8s; }
 .show:nth-child(14) { animation-delay: 3s; }
+
+@media (max-width: 600px) {
+    .skills-container {
+        justify-content: space-around;
+    }
+}
