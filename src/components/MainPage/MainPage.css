@@ -1,11 +1,11 @@
-.main-page-background{
+.main-page-background {
     position: relative;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
+
 }
 
-.elipse{
+.elipse {
     position: absolute;
     top: 0;
     left: 50%;
@@ -15,7 +15,7 @@
     z-index: -2;
 }
 
-.portfolio-text-container{
+.portfolio-text-container {
     position: absolute;
     display: flex;
     align-items: center;
@@ -26,16 +26,16 @@
     z-index: -1;
 
 }
-.portfolio-text{
+.portfolio-text {
     color: var( --fadding-white-text);
     font-size: 17vw;
     font-weight: bold;
     z-index: -1;
 }
 
-.development-text-container{
+.development-text-container {
     position: absolute;
-    top: 75%;
+    top: 78%;
 
     width: 100%;
     display: flex;
@@ -46,11 +46,11 @@
     color: var(--dust-blue);
     font-size: 4.8vw;
     font-weight: bold;
-    margin: -25px 60px;
+    margin: -25px 30px;
     white-space: pre;
 }
 #dev-text{
-    margin-right: 170px;
+    margin-right: 99px;
 }
 
 .star{
@@ -102,4 +102,134 @@
   20%, 21% { opacity: 1; }
   20%, 21.01% { opacity: 0; } /* Back to invisible for the rest of the 8s */
 }
+
+/* mobile elements styles */
+.mobile-elements-container {
+    padding: 7% 14% 10% 6%;
+
+}
+.code-text {
+    font-family: 'IBM pixel mono', Courier, monospace;
+    color: var(--dust-blue);
+    font-size: 17px;
+
+}
+
+.medium-text {
+    font-size: 21px;
+}
+.big-title {
+    font-size: 41px;
+    font-weight: bold;
+    color: var(--white);
+
+}
+.mobile-elements-container h1:nth-of-type(1) {
+    margin-bottom: -15px;
+}
+
+.small-title {
+    font-size: 21px;
+    font-weight: bold;
+    color: var(--dust-blue);
+    text-align: end;
+}
+
+/* desktop = default */
+/* mobile */
+@media (min-width: 480px) and (max-width: 700px) {
+    .mobile-elements-container {
+        padding: 7% 25%;
+    }
+
+    .main-page-background { height: auto; width: 100%; }
+
+    .desktop-only {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+/* small mobile */
+@media (max-width: 480px) {
+    .main-page-background { height: auto; width: 100%; }
+
+    .desktop-only {
+        display: none;
+        visibility: hidden;
+    }
+
+    .language-container{
+        position: static;
+        display: block;
+
+        padding: 10px 30px 30px 30px;
+    }
+}
+
+/* tablet */
+@media (min-width: 1500px) {
+    .mobile-only {
+        display: none;
+        visibility: hidden;
+    }
+
+    .desktop-only {
+        visibility: visible;
+    }
+
+
+}
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+    .mobile-elements-container {
+        padding: 7% 30%;
+    }
+    .code-text {
+        font-size: 25px;
+    }
+    .medium-text {
+        font-size: 29px;
+    }
+    .big-title {
+        font-size: 70px;
+    }
+    .small-title {
+        font-size: 29px;
+    }
+    .main-page-background { height: auto; width: 100%; }
+
+    .desktop-only {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1025px) {
+    .mobile-elements-container {
+        padding: 7% 23%;
+    }
+    .code-text {
+        font-size: 25px;
+    }
+    .medium-text {
+        font-size: 29px;
+    }
+    .big-title {
+        font-size: 70px;
+    }
+    .small-title {
+        font-size: 29px;
+    }
+    .main-page-background { height: auto; width: 100%; }
+
+    .desktop-only {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+
+
+
 

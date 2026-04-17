@@ -1,6 +1,6 @@
 function StarIcon({ id }) {
   return (
-    <svg viewBox="0 0 512 512" className="star" id={id}>
+    <svg viewBox="0 0 512 512" className="star desktop-only" id={id}>
 	<path
 		fill="currentColor"
 		d="M257 32C260.38 74.65 261.73 124.87 271.98 165.02C282.22 205.18 305.56 229.79 346.07 239.93

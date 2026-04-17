@@ -2,7 +2,7 @@ import './VerticalLink.css';
 
 function VerticalLink(){
     return(
-        <div className='vertical-github-container'>
+        <div className='vertical-github-container desktop-only'>
             <a className='github-link-text' href='https://github.com/WendyDarli'>https://github.com/WendyDarli</a>
             <img src='src\assets\images\github_underline_link.png'></img>
         </div>

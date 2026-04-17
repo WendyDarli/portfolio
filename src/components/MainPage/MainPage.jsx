@@ -30,30 +30,40 @@ function MainPage(){
 
     return(
       <section id='start' className='section-container main-page-background'>
-        <img className='elipse' src='src/assets/images/ellipse.svg' alt="background ellipse" />
+        {/* mobile elements */}
+        <div className='mobile-elements-container mobile-only'>
+          <p className='code-text' > &lt;title&gt; </p>
+          <h1 className='big-title'> Hello,</h1>
+          <h1 className='big-title'> I'm Wendy</h1>
+          <h3 className='small-title'> Backend Developer </h3>
+        </div>
+
+
+
+        <img className='elipse desktop-only' src='src/assets/images/ellipse.svg' alt="background ellipse" />
 
         <StarIcon id={'star-1'} />
         <StarIcon id={'star-2'} />
         <StarIcon id={'star-3'} />
         <StarIcon id={'star-4'} />
 
-        <div className='portfolio-text-container'>
+        <div className='portfolio-text-container desktop-only'>
           <p className='portfolio-text'>PORTFOLIO</p>
         </div>
 
         {/* Unicorn girl images */}
-        <img className='unicorn-girl' src='src/assets/images/unicorn-girl.png' alt="unicorn" />
-        <img className='unicorn-girl-glitch-1 unicorn-girl' src='src/assets/images/unicorn-girl-glitch-1.png' alt="" />
-        <img className='unicorn-girl-glitch-2 unicorn-girl' src='src/assets/images/unicorn-girl-glitch-2.png' alt="" />
-        <img className='unicorn-girl-glitch-3 unicorn-girl' src='src/assets/images/unicorn-girl-glitch-3.png' alt="" />
+        <img className='unicorn-girl desktop-only' src='src/assets/images/unicorn-girl.png' alt="unicorn" />
+        <img className='unicorn-girl-glitch-1 unicorn-girl desktop-only' src='src/assets/images/unicorn-girl-glitch-1.png' alt="" />
+        <img className='unicorn-girl-glitch-2 unicorn-girl desktop-only' src='src/assets/images/unicorn-girl-glitch-2.png' alt="" />
+        <img className='unicorn-girl-glitch-3 unicorn-girl desktop-only' src='src/assets/images/unicorn-girl-glitch-3.png' alt="" />
 
-        <div className='development-text-container'>
+        <div className='development-text-container desktop-only'>
           <p className='development-text' ref={textRef1}></p>
           <p className='development-text' id='dev-text' ref={textRef2}></p>
         </div>
 
         <VerticalLink />
-        <Language />
+        <Language/>
         
       </section>
     );
