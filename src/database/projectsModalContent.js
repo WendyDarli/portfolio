@@ -134,7 +134,7 @@ const projectsModalContent = [
             },
 
         ],
-        techTags: ['JavaScript', 'Pug', 'CSS', 'Node.js', 'Node.js', 'Express', 'MongoDB'],
+        techTags: ['JavaScript', 'Pug', 'CSS', 'Node.js', 'Express', 'MongoDB'],
         isOngithub: true,
         gitHubLink: 'https://github.com/WendyDarli/Notes-Board',
         isDeployed: false,

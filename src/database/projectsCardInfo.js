@@ -1,22 +1,25 @@
 const projectsCardInfo = [
     {
-        icon: 'src/assets/icons/gitHub.svg',
-        title: 'Project 1',
-        description: 'Full-stack Spotify-inspired clone with authentication, API integration, and dynamic data handling',
-        tags: ['React', 'Docker', 'Redis', 'JavaScript', 'Node.js']
+        id: 1,
+        icon: 'src/assets/icons/starfy.svg',
+        title: 'Starfy',
+        description: 'Full-stack Spotify-inpired music player using React, TanStack Query, and Node.js with session auth, caching, and REST APIs.',
+        tags: ['JavaScript', 'React', 'Docker', 'Redis', 'Node.js', 'Express']
     },
     {
-        icon: 'src/assets/icons/gitHub.svg',
-        title: 'Project 2',
-        description: 'Responsive web application with modern UI design and seamless user experience',
-        tags: ['React', 'Node.js', 'Express', 'MongoDB']
+        id: 2,
+        icon: 'src/assets/icons/task.png',
+        title: 'Todo App',
+        description: 'Task management app with drag-and-drop workflows, dynamic filtering, and persistent state, built with reusable components and tested state logic.',
+        tags: ['JavaScript', 'React', 'CSS']
 
     },
     {
-        icon: 'src/assets/icons/gitHub.svg',
-        title: 'Project 3',
-        description: 'Responsive web application with modern UI design and seamless user experience',
-        tags: ['React', 'Node.js', 'Express', 'MongoDB']
+        id: 3,
+        icon: 'src/assets/icons/notes.png',
+        title: 'Notes Board',
+        description: 'Notes board with real-time UI interactions, strict validation, and scalable backend design.',
+        tags: ['JavaScript', 'Pug', 'CSS', 'Node.js', 'Express', 'MongoDB']
 
     }
 ];
