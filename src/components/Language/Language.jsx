@@ -13,8 +13,6 @@ function Language(){
                 onClick={() => {setLanguage('en')}}> 
                     ENGLISH 
                 </button>
-                
-                <p> - </p>
 
                 <button 
                 className={`language-bttn ${language === 'pt' ? 'activeLanguage' : ''}`} 

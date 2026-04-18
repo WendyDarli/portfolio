@@ -105,7 +105,7 @@
 
 /* mobile elements styles */
 .mobile-elements-container {
-    padding: 7% 14% 10% 6%;
+    padding: 20% 14% 10% 6%;
 
 }
 .code-text {
@@ -139,7 +139,7 @@
 /* mobile */
 @media (min-width: 480px) and (max-width: 700px) {
     .mobile-elements-container {
-        padding: 7% 25%;
+        padding: 13% 25%;
     }
 
     .main-page-background { height: auto; width: 100%; }
@@ -183,7 +183,7 @@
 
 @media (min-width: 1025px) and (max-width: 1500px) {
     .mobile-elements-container {
-        padding: 7% 30%;
+        padding: 13% 30%;
     }
     .code-text {
         font-size: 25px;
@@ -207,7 +207,7 @@
 
 @media (min-width: 700px) and (max-width: 1025px) {
     .mobile-elements-container {
-        padding: 7% 23%;
+        padding: 13% 23%;
     }
     .code-text {
         font-size: 25px;
