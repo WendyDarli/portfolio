@@ -8,7 +8,7 @@ import AboutSection from './AboutSection/AboutSection';
 import ProjectsSection from './ProjectsSection/ProjectsSection';
 import SkillsSection from './SkillsSection/SkillsSection';
 import ContactSection from './ContactSection/ContactSection';
-import SideBar from './SideBar/SideBar';
+// import SideBar from './SideBar/SideBar';
 
 
 function App() {
@@ -64,7 +64,7 @@ useEffect(() => {
         <Header />
         <MainPage />
         
-        {showHeader && <SideBar activeSection={activeSection}/>}
+        {/* {showHeader && <SideBar activeSection={activeSection}/>} */}
         <AboutSection isActive={activeSection === 'about'}/>
         <SkillsSection />
         <ProjectsSection />
