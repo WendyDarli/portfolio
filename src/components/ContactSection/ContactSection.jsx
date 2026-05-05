@@ -1,5 +1,8 @@
 import { useLanguage } from '../Language/languageContext';
 import './ContactSection.css';
+import emailIcon from '../../assets/icons/email.svg';
+import linkedinIcon from '../../assets/icons/linkedin.svg';
+import whatsappIcon from '../../assets/icons/whatsapp.svg';
 
 function ContactSection(){
     const { t } = useLanguage();
@@ -25,13 +28,13 @@ function ContactSection(){
                         <a
                         href={link}
                         target="_blank">
-                            <img className="contact-icon" src="/src/assets/icons/email.svg" alt="email" />
+                            <img className="contact-icon" src={emailIcon} alt="email" />
                         </a>
                         <a href="https://www.linkedin.com/in/wendy-d-a558a32b1/" target="_blank" rel="noopener noreferrer">
-                            <img className='contact-icon' src='/src/assets/icons/linkedin.svg' alt='linkedin'/>
+                            <img className='contact-icon' src={linkedinIcon} alt='linkedin'/>
                         </a>
                         <a href="https://wa.me/5541999889732" target="_blank" rel="noopener noreferrer">
-                            <img className='contact-icon' src='/src/assets/icons/whatsapp.svg' alt='whatsapp'/>
+                            <img className='contact-icon' src={whatsappIcon} alt='whatsapp'/>
                         </a>
                     </div>                    
                 </div>               

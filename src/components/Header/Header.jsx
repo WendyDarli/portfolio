@@ -2,6 +2,7 @@ import './Header.css';
 import GithubIcon from '../GithubIcon';
 import { useState } from 'react';
 import { useLanguage } from '../Language/languageContext';
+import menuIcon from '../../assets/icons/menu.svg';
 
 function Header(){
     const { t } = useLanguage();
@@ -13,7 +14,7 @@ function Header(){
                     className='overlay-bttn' 
                     aria-label="menu"
                     onClick={() => setIsMenuOpen(true)}>
-                    <img src='src/assets/icons/menu.svg' alt="menu" />
+                    <img src={menuIcon} alt="menu" />
                 </button>
 
                 {isMenuOpen && (

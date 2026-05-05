@@ -11,6 +11,7 @@ import useModal from '../../hooks/useModal';
 import TechCarousel from '../TechCarousel/TechCarousel';
 import ProjectsModal from '../ProjectsModal/ProjectsModal';
 import { useLanguage } from '../Language/languageContext';
+import projectDecoCard from '../../assets/images/project-deco-card.png';
 
 
 function ProjectsSection(){
@@ -26,7 +27,7 @@ function ProjectsSection(){
                 <h1 className='title'>{t('projects-modal.projects')}</h1>
                 {cardInfo.map((project) => (
                     <div key={project.title} className='project'>
-                        <img className='project-deco-card' src='src/assets/images/project-deco-card.png'/>
+                        <img className='project-deco-card' src={projectDecoCard}/>
                         <div>
                             <img className='project-icon' src={project.icon} alt='project-icon'/>
                             <p className='project-title'>{project.title}</p>
