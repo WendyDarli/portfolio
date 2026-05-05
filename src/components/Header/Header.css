@@ -1,8 +1,7 @@
-.header-container{
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: transparent;
     padding: 30px 0px;
     font-size: 20px;
     color: var(--white);
@@ -12,14 +11,13 @@
     width: 100%;
     background: transparent;
     z-index: 10;
-    
 }
 
-.header-sub-container{
+.header-sub-container {
     padding-left: 40px;
 }
 
-.header-sub-container a{
+.header-sub-container a {
     display: inline-flex;
     margin-right: 40px;
     cursor: pointer;
@@ -32,11 +30,11 @@
 }
 
 /* underline on hover for header links */
-.header-sub-container a:not(.github-link)::after{
+.header-sub-container a:not(.github-link)::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 1px solid var(--white);
+    height: 1px;
     bottom: -4px;
     left: 0;
     background-color: var(--white);
@@ -47,22 +45,22 @@
     width: 100%;
 }
 
-.github-icon{
+.github-icon {
     height: 3.5rem;
     width: auto;
     vertical-align: middle;
     color: var(--white-60-opacity);
-
     transition: color 0.25s ease, transform 0.25s ease;
 }
 
-.github-icon:hover{
+.github-icon:hover {
     color: var(--white);
 }
 
-/* mobile */
+/* ── Mobile header bar ── */
 .mobile-header {
     position: fixed;
+    top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -70,6 +68,7 @@
     background-color: var(--white-17-opacity);
     color: var(--white);
     padding: 5px;
+    z-index: 100;
 }
 
 .mobile-header svg {
@@ -78,64 +77,84 @@
     color: var(--white);
 }
 
-.overlay-bttn{
+.overlay-bttn {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
-.overlay-bttn img{
+
+.overlay-bttn img {
     height: 40px;
     object-fit: contain;
 }
 
+/* ── Overlay backdrop — covers full screen, handles click-outside-to-close ── */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ── Nav panel — sits on top of the backdrop ── */
 .overlay-nav {
-  position: fixed;
-  inset: 0;
-  background: #A6ADBF;
-  backdrop-filter: blur(6px);
+    position: relative;
+    background: #A6ADBF;
+    border-radius: 20px;
+    padding: 72px 48px 48px;
+    width: 80%;
+    max-width: 340px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 28px;
-
-  z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
 }
 
 .overlay-nav a {
-  font-size: 28px;
-  color: var(--white);
-  text-decoration: none;
-  opacity: 0.85;
-  transition: 0.2s ease;
-  border-bottom: 1px solid transparent;
+    font-size: 28px;
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, transform 0.2s ease, border-bottom 0.2s ease;
+    border-bottom: 1px solid transparent;
 }
 
 .overlay-nav a:hover {
-  opacity: 1;
-  transform: translateY(-2px);
-  border-bottom: 1px solid var(--white);
+    opacity: 1;
+    transform: translateY(-2px);
+    border-bottom: 1px solid var(--white);
 }
 
 .close-overlay-nav {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
 
-  width: 56px;
-  height: 56px;
+    width: 44px;
+    height: 44px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  font-size: 36px;
-  color: var(--white);
+    font-size: 20px;
+    color: var(--white);
 
-  background: var(--white-60-opacity);
-  border: 1px solid var(--white);
-  border-radius: 12px;
+    background: var(--white-60-opacity);
+    border: 1px solid var(--white);
+    border-radius: 10px;
 
-  cursor: pointer;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.close-overlay-nav:hover {
+    background: var(--white-17-opacity);
 }

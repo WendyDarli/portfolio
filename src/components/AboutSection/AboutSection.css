@@ -1,3 +1,4 @@
+
 /* Containers */
 .about-container {
     position: relative;
@@ -17,6 +18,10 @@
     color: var(--dark-gray);
     margin-top: 40px;
 
+}
+
+.about-desc {
+    font-size: 21px;
 }
 
 @media (min-width: 1100px) {

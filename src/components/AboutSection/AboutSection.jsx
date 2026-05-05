@@ -11,7 +11,7 @@ function AboutSection() {
                     <h1 className='title desktop-only' > {t('about.about-me')} </h1>
                     <p className='code-text medium-text mobile-only'> &lt;{t('about.about_me')}&gt; </p>
 
-                    <p> {t('about.desc')} </p>
+                    <p className='about-desc'> {t('about.desc')} </p>
                 </div>
             </div>
         </section>

@@ -27,10 +27,10 @@ function ContactSection(){
                         target="_blank">
                             <img className="contact-icon" src="/src/assets/icons/email.svg" alt="email" />
                         </a>
-                        <a href="https://www.linkedin.com/in/wendy-v-a558a32b1/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/wendy-d-a558a32b1/" target="_blank" rel="noopener noreferrer">
                             <img className='contact-icon' src='/src/assets/icons/linkedin.svg' alt='linkedin'/>
                         </a>
-                        <a href="https://wa.me/your-phonenumber" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/5541999889732" target="_blank" rel="noopener noreferrer">
                             <img className='contact-icon' src='/src/assets/icons/whatsapp.svg' alt='whatsapp'/>
                         </a>
                     </div>                    

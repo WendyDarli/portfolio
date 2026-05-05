@@ -5,6 +5,7 @@ const pt = {
     projects: "projetos",
     contact: "contato",
     resume: "currículo",
+    resumeLink: "https://docs.google.com/document/d/1NxR1LWIiJ0RmohcQvYDSRrMg7BnyR-TffoiBPVyL_tQ/edit?usp=sharing"
   },
 
   "main-page": {
@@ -48,6 +49,7 @@ const pt = {
         "Construí um player de música inspirado no Spotify que replica funcionalidades principais de uma plataforma moderna de streaming.",
         "A aplicação usa um frontend em React com TanStack Query para gerenciamento de estado do servidor e cache, e um backend em Node.js + Express seguindo uma arquitetura MVC. A autenticação é feita com sessões Express armazenadas no Redis com cookies HTTP-only.",
         "O sistema integra a API do Spotify e o Deezer para buscar dados musicais e fornecer reprodução de áudio, suportando funcionalidades como paginação infinita, gerenciamento de playlists, busca e controles completos de reprodução.",
+        "Implementei rastreamento distribuído com OpenTelemetry e Grafana Tempo, correlacionando logs com traces via trace/span IDs e aplicando tail sampling para erros e requisições de alta latência.",
         "Este projeto foi desenvolvido para praticar a construção de um sistema full-stack escalável usando padrões do mundo real, incluindo APIs RESTful, autenticação por sessão, estratégias de cache e arquitetura modular de backend.",
       ],
     },
