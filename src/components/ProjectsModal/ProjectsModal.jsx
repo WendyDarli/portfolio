@@ -1,5 +1,6 @@
 import './ProjectsModal.css';
 import { useState, useEffect } from 'react';
+import rightArrow from '../../assets/icons/right-arrow.svg';
 
 // Database
 import { projectsModalContent as projects } from '../../database/projectsModalContent';
@@ -97,7 +98,7 @@ function ProjectsModal({ activeId, isOpen, closeModal }) {
 
                                 <span className="modal-bttn-content">
                                     {t('projects-modal.buttons.github')}
-                                    <img src="/src/assets/icons/right-arrow.svg" className="modal-bttn-arrow" alt="" />
+                                    <img src={rightArrow} className="modal-bttn-arrow" alt="" />
                                 </span>
                             </button>
 
@@ -107,7 +108,7 @@ function ProjectsModal({ activeId, isOpen, closeModal }) {
 
                                 <span className="modal-bttn-content">
                                     {t('projects-modal.buttons.deploy')}
-                                    <img src="/src/assets/icons/right-arrow.svg" className="modal-bttn-arrow" alt="" />
+                                    <img src={rightArrow} className="modal-bttn-arrow" alt="" />
                                 </span>
                             </button>
                         </div>

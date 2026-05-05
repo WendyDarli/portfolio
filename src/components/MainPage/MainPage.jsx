@@ -8,6 +8,13 @@ import VerticalLink from '../VerticalLink/VerticalLink';
 import runScramble from '../../utils/scrambleText';
 import { useLanguage } from '../Language/languageContext';
 
+// Images
+import ellipse from '../../assets/images/ellipse.svg';
+import unicornGirl from '../../assets/images/unicorn-girl.png';
+import unicornGirlGlitch1 from '../../assets/images/unicorn-girl-glitch-1.png';
+import unicornGirlGlitch2 from '../../assets/images/unicorn-girl-glitch-2.png';
+import unicornGirlGlitch3 from '../../assets/images/unicorn-girl-glitch-3.png';
+
 function MainPage(){
 
   const { t } = useLanguage();
@@ -43,7 +50,7 @@ function MainPage(){
 
 
 
-        <img className='elipse desktop-only' src='src/assets/images/ellipse.svg' alt="background ellipse" />
+        <img className='elipse desktop-only' src={ellipse} alt="background ellipse" />
 
         <StarIcon id={'star-1'} />
         <StarIcon id={'star-2'} />
@@ -55,10 +62,10 @@ function MainPage(){
         </div>
 
         {/* Unicorn girl images */}
-        <img className='unicorn-girl desktop-only' src='src/assets/images/unicorn-girl.png' alt="unicorn" />
-        <img className='unicorn-girl-glitch-1 unicorn-girl desktop-only' src='src/assets/images/unicorn-girl-glitch-1.png' alt="" />
-        <img className='unicorn-girl-glitch-2 unicorn-girl desktop-only' src='src/assets/images/unicorn-girl-glitch-2.png' alt="" />
-        <img className='unicorn-girl-glitch-3 unicorn-girl desktop-only' src='src/assets/images/unicorn-girl-glitch-3.png' alt="" />
+        <img className='unicorn-girl desktop-only' src={unicornGirl} alt="unicorn" />
+        <img className='unicorn-girl-glitch-1 unicorn-girl desktop-only' src={unicornGirlGlitch1} alt="" />
+        <img className='unicorn-girl-glitch-2 unicorn-girl desktop-only' src={unicornGirlGlitch2} alt="" />
+        <img className='unicorn-girl-glitch-3 unicorn-girl desktop-only' src={unicornGirlGlitch3} alt="" />
 
         <div className='development-text-container desktop-only'>
           <p className='development-text' ref={textRef1}></p>

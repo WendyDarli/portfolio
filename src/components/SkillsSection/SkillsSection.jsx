@@ -1,21 +1,34 @@
 import './SkillsSection.css';
 import { useEffect, useRef } from 'react';
 
+// Skill icons
+import javaScriptIcon from '../../assets/icons/javaScript.svg';
+import htmlIcon from '../../assets/icons/html.svg';
+import cssIcon from '../../assets/icons/css.svg';
+import gitIcon from '../../assets/icons/git.svg';
+import githubIcon from '../../assets/icons/github.svg';
+import mySqlIcon from '../../assets/icons/mySql.svg';
+import mongoDBIcon from '../../assets/icons/mongoDB.svg';
+import postgreSqlIcon from '../../assets/icons/postgreSql.svg';
+import nodeJsIcon from '../../assets/icons/nodeJs.svg';
+import expressIcon from '../../assets/icons/express.svg';
+import reactIcon from '../../assets/icons/react.svg';
+
 
 function SkillsSection(){
 
     const skills = [
-        { name: 'JavaScript', icon: '/src/assets/icons/javaScript.svg' },
-        { name: 'HTML', icon: '/src/assets/icons/html.svg' },
-        { name: 'CSS', icon: '/src/assets/icons/css.svg' },
-        { name: 'Git', icon: '/src/assets/icons/git.svg' },
-        { name: 'GitHub', icon: '/src/assets/icons/github.svg' },
-        { name: 'MySQL', icon: '/src/assets/icons/mySql.svg' },
-        { name: 'MongoDB', icon: '/src/assets/icons/mongoDb.svg' },
-        { name: 'PostgreSQL', icon: '/src/assets/icons/postgreSql.svg' },
-        { name: 'Node.js', icon: '/src/assets/icons/nodeJs.svg' },
-        { name: 'Express', icon: '/src/assets/icons/express.svg' },
-        { name: 'React', icon: '/src/assets/icons/react.svg' },
+        { name: 'JavaScript', icon: javaScriptIcon },
+        { name: 'HTML', icon: htmlIcon },
+        { name: 'CSS', icon: cssIcon },
+        { name: 'Git', icon: gitIcon },
+        { name: 'GitHub', icon: githubIcon },
+        { name: 'MySQL', icon: mySqlIcon },
+        { name: 'MongoDB', icon: mongoDBIcon },
+        { name: 'PostgreSQL', icon: postgreSqlIcon },
+        { name: 'Node.js', icon: nodeJsIcon },
+        { name: 'Express', icon: expressIcon },
+        { name: 'React', icon: reactIcon },
     ];
 
     const elementsRef = useRef([]);

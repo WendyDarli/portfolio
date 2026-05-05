@@ -105,7 +105,7 @@
 .modal-bttn {
     background-color: transparent;
     border: none;
-    background-image: url('/src/assets/images/modalBttn.svg');
+    background-image: url('../../assets/images/modalBttn.svg');
 
 
     background-size: contain;
